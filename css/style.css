@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    background-color: #7494c0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.header__title {
+    position: relative;
+    margin-left: 60px;
+}
+
+.header__title::before {
+    content: "";
+    position: absolute;
+    border-bottom: solid 4px #fff;
+    border-left: solid 4px #fff;
+    width: 24px;
+    height: 24px;
+    top: 23%;
+    left: -40%;
+    transform: rotate(45deg);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav li {
+    padding: 10px 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    padding: 100px 10px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topics {
+    margin: 20px auto;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 60px;
+    font-size: 90%;
+}
+
+.line__left {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.line__left figure {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    margin-top: 10px
+}
+
+
+.line__left figure img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+}
+
+.line__left .text {
+    position: relative;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.line__left .text::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -5px;
+    top: 5px;
+    border-right: 15px solid #ffffff;
+    border-bottom: 15px solid transparent;
+}
+
+.line__left-text {
+    padding-left: 100px;
+}
+
+.line__left-date {
+    content: '';
+    position: absolute;
+    display: block;
+    text-align: left;
+    top: 20%;
+    right: -25%;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.message {
+    position: relative;
+    text-align: center;
+    background-color: #e0dddd;
+    margin: 50px 10px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 80%;
+}
+
+.message::before {
+    position: absolute;
+    content: url(../img/メガホン.png);
+    vertical-align: middle;
+    left: 10px;
+}
+
+.line__right {
+    position: relative;
+    margin: 100px 10px 5px 0;
+}
+
+
+.line__right .text {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #8de055;
+    margin: 0;
+    margin-left: 80px;
+}
+
+
+.line__right .text::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    right: -5px;
+    top: 5px;
+    border-left: 15px solid #8de055;
+    border-bottom: 15px solid transparent;
+}
+
+.line__right-date {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100px;
+    text-align: right;
+    left: -30px;
+    bottom: 0px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer__menu {
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+
+.footer__menu li {
+    padding: 0 20px;
+}
+
+input {
+    padding: 7px 5px;
+    color: black;
+    background: #e0dddd;
+    border: solid 1px #e0dddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.smile {
+    position: absolute;
+    right: 6%;
+    top: 3px;
+}
+
+@media screen and (max-width: 900px) {
+    .smile {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 555px) {
+
+    nav li {
+        padding: 10px;
+    }
+
+    .header__title {
+        font-size: 20px;
+        margin-left: 30px;
+    }
+
+    .header__title::before {
+        border-bottom: solid 3px #fff;
+        border-left: solid 3px #fff;
+        width: 20px;
+        height: 20px;
+        top: 18%;
+        left: -20%;
+    }
+
+    .footer__menu li {
+        padding: 0 10px;
+    }
+
+    .smile {
+        right: 15%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+
+    .line__left .text {
+        margin-top: 20px;
+        width: 90px;
+    }
+
+    .line__left-date {
+        top: 100%;
+        right: 30%;
+    }
+
+    .line__right {
+        margin: 50px 0 0 auto;
+    }
+}
